@@ -6,7 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var artone={
+var articles = {
+  'art-one': {
     title: 'Article-one',
     heading: 'Aricle-one',
     content: `   <p>
@@ -18,6 +19,20 @@ var artone={
         <p>
             bla abla jffvbvalvb bla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvbbla abla jffvbvalvb
         </p>`
+    
+},
+'art-two': {
+    title: 'Article-two',
+    heading: 'Aricle-two',
+    content: `   <p>  This is shit is article two </p> ` 
+                      
+},
+'art-three': {
+    title: 'Article-three',
+    heading: 'Aricle-three',
+    content: `   <p>  This is article three </p>`
+                   
+}
     
 };
 
@@ -57,17 +72,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/art-one',function(req,res){
-    res.send(createTemplate(artone));
+app.get('/:artName',function(req,res){
+    var artName = req.params.artName;
+    res.send(createTemplate(articles[artName]));
 });
 
-app.get('/art-two',function(req,res){
-     res.sendFile(path.join(__dirname, 'ui', 'art-two.html'));
-});
 
-app.get('/art-three',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'art-three.html'));
-});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
