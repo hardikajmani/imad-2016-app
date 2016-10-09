@@ -24,7 +24,7 @@ var articles = {
 'art-two': {
     title: 'Article-two',
     heading: 'Aricle-two',
-    content: `   <p>  This is shit is article two </p> ` 
+    content: `   <p>  This  shit is article two </p> ` 
                       
 },
 'art-three': {
