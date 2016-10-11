@@ -10,11 +10,11 @@ var elem2 = document.getElementById('main2');
 
 var marginleft = 0;
 function moveright(){
-    marginleft = marginleft + 10;
+    marginleft = marginleft + 5;
     main2.style.marginLeft = marginleft + 'px';
     
 }
 
 main2.onclick = function(){
-    var int = setInterval(moveright,100);
+    var int = setInterval(moveright,25);
 };
