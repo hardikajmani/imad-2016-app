@@ -8,5 +8,5 @@ elem.innerHTML = ' NEw changes BLA bla bla bla ';
 //To move the picture
 var elem2 = document.getElementById('main2');
 main2.onclick = function(){
-    img.style.marginLeft = '100px';
+    main2.style.marginLeft = '100px';
 };
