@@ -1,6 +1,6 @@
 console.log('Loaded!');
 
-// change text
+/*// change text
 var elem = document.getElementById('main');
 
 elem.innerHTML = ' NEw changes BLA bla bla bla ';
@@ -17,4 +17,4 @@ function moveright(){
 
 main2.onclick = function(){
     var int = setInterval(moveright,5);
-};
+};*/
