@@ -9,13 +9,16 @@ button.onclick=  function(){
       var request = new XMLHttpRequest();
      
      //grab the response 
-     rquest.onreadystatechange = function(){
-         if(request.ReadyState === XMLHttpRequest.DONE){
-             if(requst.response === 200)
+     request.onreadystatechange = function(){
+         if(request.readyState === XMLHttpRequest.DONE){
+             if(requst.response === 200){
              var counter = request.responseText;
               var span =  document.getElementById('count');
             span.innerHTML = counter.toString();  
-         }
+         
+             }     
+        }
+         
      }; 
      
      //Render the response
