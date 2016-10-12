@@ -1,15 +1,23 @@
 //code to use counter using java script
 var button = document.getElementById('counter');
 
-var counter = 0;
+
 
 button.onclick=  function(){
-     // Accept the response from the counter 
+     // Make the request 
+     
+      var request = new XMLHttpRequest();
      
      //grab the response 
+     rquest.onreadystatechange = function(){
+         if(request.ReadyState === XMLHttpRequest.DONE){
+             if(requst.response === 200)
+             var counter = request.responseText;
+              var span =  document.getElementById('count');
+            span.innerHTML = counter.toString();  
+         }
+     }; 
      
      //Render the response
-     counter = counter + 1;
-     var span =  document.getElementById('count');
-     span.innerHTML = counter.toString();
+     
 };
