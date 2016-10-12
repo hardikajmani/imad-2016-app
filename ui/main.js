@@ -10,6 +10,6 @@ button.onclick=  function(){
      
      //Render the response
      counter = counter + 1;
-     var count =  document.getElementById('count');
-     count.InnerHTML = counter.toString();
+     var span =  document.getElementById('count');
+     span.InnerHTML = counter.toString();
 }
