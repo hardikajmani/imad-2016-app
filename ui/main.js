@@ -59,7 +59,7 @@ submit.onclick = function(){
     var nameInput = document.getElementById('name');
    var name = nameInput.value;    
   // Making the request
-  request.open('GET','http://hardikajmani.imad.hasura-app.io/submit-name?name' + name,true);
+  request.open('GET','http://hardikajmani.imad.hasura-app.io/submit-name?name=' + name,true);
   request.send(null);
      
 };
